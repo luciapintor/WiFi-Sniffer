@@ -7,3 +7,4 @@ The main script:
 4) starts the sniffing in each interface
 5) saves collected data in files 
 
+Superuser privileges are needed to run this script
