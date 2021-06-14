@@ -1,12 +1,12 @@
 # script by luciapintor90@gmail.com
-import os
-import time
 import pyric.pyw as pyw  # iw functionality
 import pyric.utils.channels as pych
 
 
 def configure_interfaces(channels=None):
-    """ This function sets the monitor mode and assigns the channels. """
+    """
+    This function sets the monitor mode and assigns the channels.
+    """
 
     # set default channels, if not defined
     if channels is None:
@@ -55,7 +55,9 @@ def configure_interfaces(channels=None):
 
 
 def set_monitor(w_card):
-    """ This function set the interface to monitor mode as airmon-ng. """
+    """
+    This function sets the interface to monitor mode as airmon-ng.
+    """
 
     # standard name for the monitor interfaces
     mon_id = "mon{}".format(w_card.phy)
@@ -74,7 +76,9 @@ def set_monitor(w_card):
 
 
 def set_channel_verified(m_card, channel):
-    """ This function set the channel and vefies if it is set correctly. """
+    """
+    This function sets the channel and verifies if it is set correctly.
+    """
 
     # set the channel
     pyw.chset(m_card, channel)
