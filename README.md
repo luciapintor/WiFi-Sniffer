@@ -1,20 +1,5 @@
 # WiFi-Sniffer
 
-This algorithm is part of a study aimed at the realization 
-of a dataset consisting of .pcap captures of Wi-Fi packets emitted by a single device,
-simultaneously on 3 channels. 
-
-Each capture takes place in an isolated environment (anechoic chamber) 
-and aims to study packet sending patterns on smartphones 
-with different vendors and operating systems.
-
-The purpose of the study is to realize people counting systems 
-based on probe request sniffing, 
-that can overcome the issue of [mac address randomization][https://source.android.com/devices/tech/connect/wifi-mac-randomization].
-
-This simple script can be used to capture Wi-Fi packets via interfaces 
-that support [monitor mode][https://en.wikipedia.org/wiki/Monitor_mode].
-
 This algorithm configures the sniffing interfaces,
 starts the sniffing in each interface and
 save collected data in files.
@@ -62,7 +47,3 @@ through pip, and additionally tcpdump utility.
 `pip install scapy`
 
 `sudo apt-get install tcpdump -y`
-
-[https://source.android.com/devices/tech/connect/wifi-mac-randomization]: https://source.android.com/devices/tech/connect/wifi-mac-randomization
-
-[https://en.wikipedia.org/wiki/Monitor_mode]: https://en.wikipedia.org/wiki/Monitor_mode
