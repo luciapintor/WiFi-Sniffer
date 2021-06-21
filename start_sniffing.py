@@ -42,7 +42,7 @@ def start_sniffing(monitor_list, sniffing_duration=1200, starting_delay=60):
     # capture timestamp
     cap_ts = datetime.now().strftime("%Y-%b-%d-h%H-m%M-s%S")
     print("Capture started at {}".format(cap_ts))
-    print("Capture duration: {} minutes".format(int(sniffing_duration/60)))
+    print("Capture duration: {} minutes".format(int(sniffing_duration / 60)))
 
     # subprocesses list
     cap_sub = []
@@ -60,6 +60,10 @@ def start_sniffing(monitor_list, sniffing_duration=1200, starting_delay=60):
                               '-tt',  # Timestamp seconds
                               '-e',  # Link level header is printed out
                               '-w', filename,  # Save output
+                              'type', 'mgt',
+                              'subtype', 'probe-req',  # get probe requests
+                              'subtype', 'probe-resp',  # get probe responses
+                              'subtype', 'beacon',  # get AP beacons
                               ], stdout=subprocess.PIPE))
 
     # sleep while sub processes make captures 
