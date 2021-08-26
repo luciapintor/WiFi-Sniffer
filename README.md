@@ -1,8 +1,11 @@
 # WiFi-Sniffer
 
 This algorithm aims to set up Wi-Fi interfaces and to create pcap captures of Wi-Fi management messages simultaneously on different channels (by default it selects the non-overlapping channels 1, 6 and 11).
+
 The software was designed to create a dataset containing captures of individual devices in an environment shielded from radio interference in order to study the ground truth of various smartphone models.
+
 In order to study the signature of each device independently, it is necessary to take capture in an isolated environment (anechoic chamber) in which the only Wi-Fi equipment present are the sniffer and the smartphone to examine. 
+
 This allows also to identify transmission patterns or features that distinguish each smartphone from the others, considering different vendors and operating systems.
 
 The purpose of the study is to realize people counting systems based on probe request sniffing, that can overcome the issue of mac address randomization, that is performed in most of new [Android](https://source.android.com/devices/tech/connect/wifi-mac-randomization) and [iOS](https://support.apple.com/en-gb/guide/security/secb9cb3140c/web) devices.
